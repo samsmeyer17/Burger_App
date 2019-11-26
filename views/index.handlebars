@@ -1,0 +1,42 @@
+<h2>Don't forget to eat these!!!</h2>
+
+<ul>
+  {{!-- #each is a handlebars method that allows us to iterate over an array the same way we would do it with a standard for loop in javascript --}}
+  {{#each burgers}}
+  {{!-- if sleepy is false --}}
+  {{#unless devoured}}
+  {{!-- '>' notation indicates that we are rendering a partial (a component of the UI) --}}
+  {{!-- line below imports the following relative path -> /partials/burgers/cat-block --}}
+  <li>
+    {{burger_name}}
+
+    <button class="devour" data-id="{{id}}">Devour!</button>
+  </li>
+
+  {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Nom Nom Nom!!</h2>
+
+<ul>
+  {{#each burgers}}
+  {{!-- if sleepy is true --}}
+  {{#if devoured}}
+  <li>
+    {{burger_name}}
+  </li>
+  {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
