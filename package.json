@@ -1,7 +1,7 @@
 {
   "name": "burger_app",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Overview   This application allows you to keep track of burgers you still want to eat and burgers you have already eaten. You can add as many burgers you want to the database and \"devour\" them whenever you choose with the click of a button.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/samsmeyer17/Burger_App#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "config.json": "0.0.4",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1"
