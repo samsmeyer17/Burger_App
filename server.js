@@ -36,6 +36,10 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/burgers.js");
 app.use(routes);
 
+var syncOptions = {
+  force: true
+};
+
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
   // Log (server-side) when our server has started
