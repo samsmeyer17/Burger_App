@@ -9,9 +9,9 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 console.log("API ROUTES LOADED");
 
-// router.get('/', function(req, res) {
-//   res.json(path.join(__dirname, "views/layouts/index.handlebars"))
-// });
+router.get('/', function(req, res) {
+  res.json(path.join(__dirname, "views/layouts/index.handlebars"))
+});
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
