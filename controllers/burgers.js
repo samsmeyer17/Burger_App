@@ -1,14 +1,17 @@
+var path = require('path');
 var express = require("express");
 // invoke the Router() object from express so that we can declare our routes
 var router = express.Router();
+
+
 
 // Import the model (cat.js) to use its database functions.
 var burger = require("../models/burger.js");
 console.log("API ROUTES LOADED");
 
-router.get('/', function(req, res) {
-  res.json(path.join(__dirname, "public/index.html"))
-});
+// router.get('/', function(req, res) {
+//   res.json(path.join(__dirname, "views/layouts/index.handlebars"))
+// });
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {

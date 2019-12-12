@@ -23,7 +23,7 @@ Parse application body as JSON
 - extended: true syntax allows for rich objects and arrays to be encoded which allows for a JSON-like experience
 - See the following stackoverflow post for further context on extended: true
 */
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set Handlebars.
@@ -37,7 +37,7 @@ var routes = require("./controllers/burgers.js");
 app.use(routes);
 
 var syncOptions = {
-  force: true
+  force: false
 };
 
 // Start our server so that it can begin listening to client requests.
